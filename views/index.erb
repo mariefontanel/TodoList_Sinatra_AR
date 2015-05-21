@@ -1,0 +1,25 @@
+<div class="entree">
+	<form action="/" method="post" accept-charset="utf-8">
+		<input class="input1" type="text" name="todos[tache]" placeholder="à faire:">
+	</form>
+</div>
+<div class="colonne1">	
+	<% @todo.each do |todos| %>
+		<div class="boite">
+			<div class="post_it">
+				<%= todos.tache %>
+				<%= todos.created_at %>
+				<div class="editer">
+					<form action="/<%= todos.id %>" method= "get">
+						<input type="submit" value="Editer">
+					</form>
+				</div>
+		</div>
+			<div class="switch">
+					<form action="/<%= todos.id %>" method= "post">
+					<input class="switch1" type="submit" value="=>">
+					</form>
+			</div>
+		</div>
+	<% end %>
+</div>	

@@ -1,0 +1,5 @@
+<form action="/<%= @todo.id %>" method="post" accept-charset="utf-8">
+	<input type="text" name="todos[tache]" value="<%= @todo.tache %>">
+	<input type="submit" value="Editer">
+	<input type="hidden" name="_method" value="put">
+</form>	
